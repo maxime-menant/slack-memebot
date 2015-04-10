@@ -8,7 +8,7 @@ $meme = new MemeBot\MemeClass;
 
 // Get Request
 $trigger = trim($_POST['trigger_word']);
-$text    = trim(substr($_POST['text'], strlen($trigger)));
+$text    = trim($_POST['text']);
 $channel = trim($_POST['channel_name']);
 $user    = trim($_POST['user_name']);
 
@@ -56,8 +56,6 @@ function slack($message, $username, $channel) {
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
   $result = curl_exec($ch);
   curl_close($ch);
-
-  Log::info("Sent to Slack: " . $data, array('context' => 'Notifications'));
 
   return $result;
 }
