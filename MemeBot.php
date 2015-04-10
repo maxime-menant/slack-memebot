@@ -31,6 +31,7 @@ function sendResponse($response)
 {
     header('Content-Type: application/json');
     die(json_encode(array(
-        'text' => $response
+        'text' => "<".$response.">",
+        'unfurl_links' => true
     )));
 }
