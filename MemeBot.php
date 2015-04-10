@@ -40,7 +40,7 @@ function sendResponse($response)
 // (string) $message - message to be passed to Slack
 // (string) $room - room in which to write the message, too
 // (string) $icon - You can set up custom emoji icons to use with each message
-public static function slack($message) {
+function slack($message) {
   $data = "payload=" . json_encode(array(
           "text" =>  urlencode("<."$message.">"),
       ));
