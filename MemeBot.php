@@ -14,13 +14,14 @@ $user    = trim($_POST['user_name']);
 
 if($text == '') {
 	sendHtmlResponse(
-    "One does not simply <text> - Lord of the Rings Boromir<br />
-    Y U NO <text> - Y U NO Guy<br />
-    I don't always <text> but when i do <text> - The Most Interesting man in the World<br />
-    Not sure if <text> or <text> - Futurama Fry<br />
-    Brace yourselves <text> - Brace Yourselves X is Coming (Imminent Ned, Game of Thrones)<br />
-    Yo dawg <text> so <text> - Yo Dawg Heard You (Xzibit)<br />
-    <text> that would be great - Bill Lumbergh from Office Space<br />
+    "
+    One does not simply <text> - Lord of the Rings Boromir
+    Y U NO <text> - Y U NO Guy
+    I don't always <text> but when i do <text> - The Most Interesting man in the World
+    Not sure if <text> or <text> - Futurama Fry
+    Brace yourselves <text> - Brace Yourselves X is Coming (Imminent Ned, Game of Thrones)
+    Yo dawg <text> so <text> - Yo Dawg Heard You (Xzibit)
+    <text> that would be great - Bill Lumbergh from Office Space
     What if I told you <text> - Matrix Morpheus");
 }
 
