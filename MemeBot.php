@@ -14,7 +14,7 @@ $user    = trim($_POST['user_name']);
 
 if($text == '') {
 	sendHtmlResponse(
-    "
+    "Available memes:
     One does not simply <text> - Lord of the Rings Boromir
     Y U NO <text> - Y U NO Guy
     I don't always <text> but when i do <text> - The Most Interesting man in the World
