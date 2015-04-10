@@ -19,7 +19,7 @@ if($text == '') {
 
 $returned_meme = $meme->generateMeme($text);
 
-slack($returned_meme);
+slack($returned_meme, $username, $channel);
 sendResponse($returned_meme);
 
 exit;
