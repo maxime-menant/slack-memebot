@@ -17,8 +17,8 @@ if($text == '') {
 
 $returned_meme = $meme->generateMeme($text);
 
-sendResponse($returned_meme);
 slack($returned_meme);
+sendResponse($returned_meme);
 
 exit;
 
@@ -41,19 +41,18 @@ function sendResponse($response)
 // (string) $room - room in which to write the message, too
 // (string) $icon - You can set up custom emoji icons to use with each message
 public static function slack($message) {
-        $data = "payload=" . json_encode(array(
-                "text" =>  urlencode("<."$message.">"),
-            ));
+  $data = "payload=" . json_encode(array(
+          "text" =>  urlencode("<."$message.">"),
+      ));
 
-        // You can get your webhook endpoint from your Slack settings
-        $ch = curl_init("https://hooks.slack.com/services/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");
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($ch);
-        curl_close($ch);
+  // You can get your webhook endpoint from your Slack settings
+  $ch = curl_init("https://hooks.slack.com/services/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");
+  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+  curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  $result = curl_exec($ch);
+  curl_close($ch);
 
-        return $result;
-    }
+  return $result;
+}
 
-?>
