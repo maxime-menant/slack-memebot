@@ -9,7 +9,7 @@ $meme = new MemeBot\MemeClass;
 // Get Request
 $trigger = trim($_POST['trigger_word']);
 $text    = trim($_POST['text']);
-$channel = trim($_POST['channel_name']);
+$channel = trim($_POST['channel_id']);
 $user    = trim($_POST['user_name']);
 
 if($text == '') {
@@ -46,7 +46,8 @@ function slack($message, $username, $channel) {
   $data = "payload=" . json_encode(array(
           "text" =>  urlencode("<".$message.">"),
           "username" => $username,
-          "channel"  => $channel
+          "channel"  => $channel,
+          "icon_emoji" => ":ghost:"
       ));
 
   // You can get your webhook endpoint from your Slack settings
