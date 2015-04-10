@@ -46,8 +46,7 @@ function slack($message, $username, $channel) {
   $data = "payload=" . json_encode(array(
           "text" =>  urlencode("<".$message.">"),
           "username" => $username,
-          "channel"  => $channel,
-          "icon_emoji" => ":ghost:"
+          "channel"  => $channel
       ));
 
   // You can get your webhook endpoint from your Slack settings
