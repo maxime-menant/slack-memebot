@@ -42,7 +42,7 @@ function sendResponse($response)
 // (string) $icon - You can set up custom emoji icons to use with each message
 function slack($message) {
   $data = "payload=" . json_encode(array(
-          "text" =>  urlencode("<."$message.">"),
+          "text" =>  urlencode("<".$message.">"),
       ));
 
   // You can get your webhook endpoint from your Slack settings
