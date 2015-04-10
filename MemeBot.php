@@ -29,7 +29,7 @@ if($text == '') {
 $returned_meme = $meme->generateMeme($text);
 
 slack($returned_meme, $user, $channel);
-sendResponse($returned_meme);
+sendResponse($text);
 
 exit;
 
@@ -46,6 +46,7 @@ function sendResponse($response)
     //     'unfurl_links' => true
     // )));
   header("HTTP/1.1 200 OK");
+  die($response);
 }
 
 function sendHtmlResponse($response)
