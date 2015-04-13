@@ -92,6 +92,37 @@ class MemeClass implements Memeable
 
 			return $final_text;
 		}
+
+		// X all the Y
+		if (preg_match('/(.* all the .*)/i', $text, $matches) === 1) {
+
+			$final_text['text0'] = $matches[1];
+			$final_text['template_id'] = '61533';
+
+			return $final_text;
+		}
+
+		// Buzz - bitches, bitches everywhere
+		if (preg_match('/(.*,) (.* everywhere)/i', $text, $matches) === 1) {
+
+			$final_text['text0'] = $matches[1];
+			$final_text['text1'] = $matches[2];
+			$final_text['template_id'] = '347390';
+
+			return $final_text;
+		}
+
+		// Too damn high
+		if (preg_match('/(.*) ([is|are|was|were] too damn high)/i', $text, $matches) === 1) {
+
+			$final_text['text0'] = $matches[1];
+			$final_text['text1'] = $matches[2];
+			$final_text['template_id'] = '61580';
+
+			return $final_text;
+		}
+
+
 	}
 
 	public function generateMeme($text)
@@ -118,8 +149,8 @@ class MemeClass implements Memeable
             $response = curl_exec($ch);
             curl_close($ch);
         }
-        
+
         return json_decode($response);
 	}
-	
+
 }

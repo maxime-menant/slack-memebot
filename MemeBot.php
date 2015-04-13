@@ -22,7 +22,11 @@ if($text == '') {
     Brace yourselves <text> - Brace Yourselves X is Coming (Imminent Ned, Game of Thrones)
     Yo dawg <text> so <text> - Yo Dawg Heard You (Xzibit)
     <text> that would be great - Bill Lumbergh from Office Space
-    What if I told you <text> - Matrix Morpheus");
+    What if I told you <text> - Matrix Morpheus
+    <text> all the <text> - X all the Y
+    <text> everywhere - buzz leclair Everywhere
+    <text> too damn high - Too damn high
+    ");
 }
 
 
