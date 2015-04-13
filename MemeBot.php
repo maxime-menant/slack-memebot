@@ -24,7 +24,7 @@ if($text == '') {
     <text> that would be great - Bill Lumbergh from Office Space
     What if I told you <text> - Matrix Morpheus
     <text> all the <text> - X all the Y
-    <text> everywhere - buzz leclair Everywhere
+    <text>, <text> everywhere - buzz leclair Everywhere
     <text> too damn high - Too damn high
     Nobody have time for <text> - Aint nobody have time for that
     <text> | <text> determine(s)/prove(s) that was a lie
