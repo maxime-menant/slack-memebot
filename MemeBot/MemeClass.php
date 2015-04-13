@@ -126,7 +126,7 @@ class MemeClass implements Memeable
     if (preg_match('/(nobody have time for) (.*)/i', $text, $matches) === 1) {
 
         $final_text['text0'] = $matches[2];
-        $final_text['text1'] = 'Ain\'t nobody have time for that'
+        $final_text['text1'] = 'Ain\'t nobody have time for that';
         $final_text['template_id'] = '442575';
 
         return $final_text;
