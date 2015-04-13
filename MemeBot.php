@@ -50,7 +50,7 @@ function sendResponse($response)
     //     'unfurl_links' => true
     // )));
   header("HTTP/1.1 200 OK");
-  die($response);
+  die("/meme ".$response);
 }
 
 function sendHtmlResponse($response)
