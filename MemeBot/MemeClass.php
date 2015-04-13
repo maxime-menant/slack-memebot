@@ -93,6 +93,16 @@ class MemeClass implements Memeable
 			return $final_text;
 		}
 
+		// Aint nobody have time for that
+    if (preg_match('/(nobody have time for) (.*)/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = $matches[2];
+        $final_text['text1'] = 'Ain\'t nobody have time for that';
+        $final_text['template_id'] = '442575';
+
+        return $final_text;
+    }
+
 		// X all the Y
 		if (preg_match('/(.* all the .*)/i', $text, $matches) === 1) {
 
@@ -121,16 +131,6 @@ class MemeClass implements Memeable
 
 			return $final_text;
 		}
-
-		// Aint nobody have time for that
-    if (preg_match('/(nobody have time for) (.*)/i', $text, $matches) === 1) {
-
-        $final_text['text0'] = $matches[2];
-        $final_text['text1'] = 'Ain\'t nobody have time for that';
-        $final_text['template_id'] = '442575';
-
-        return $final_text;
-    }
 
 		// That's was a lie
     if (preg_match('/(.*) \| (.* (determines?|proves?) that was a lie)/i', $text, $matches) === 1) {
