@@ -133,7 +133,7 @@ class MemeClass implements Memeable
     }
 
 		// That's was a lie
-    if (preg_match('/(.* \|) (.* (determines?|proves?) that\'?s was a lie)/i', $text, $matches) === 1) {
+    if (preg_match('/(.*) \| (.* (determines?|proves?) that was a lie)/i', $text, $matches) === 1) {
 
         $final_text['text0'] = $matches[1];
         $final_text['text1'] = $matches[2];

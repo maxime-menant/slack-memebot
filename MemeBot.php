@@ -27,7 +27,7 @@ if($text == '') {
     <text> everywhere - buzz leclair Everywhere
     <text> too damn high - Too damn high
     Nobody have time for <text> - Aint nobody have time for that
-    <text> | <text> determine/prove thats was a lie
+    <text> | <text> determine(s)/prove(s) that was a lie
     ");
 }
 
