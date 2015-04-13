@@ -132,6 +132,16 @@ class MemeClass implements Memeable
         return $final_text;
     }
 
+		// That's was a lie
+    if (preg_match('/(.* \|) (.* (determines?|proves?) that\'?s was a lie)/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = $matches[1];
+        $final_text['text1'] = $matches[2];
+        $final_text['template_id'] = '444501';
+
+        return $final_text;
+    }
+
 	}
 
 	public function generateMeme($text)
