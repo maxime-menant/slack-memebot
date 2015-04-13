@@ -24,7 +24,7 @@ class MemeClass implements Memeable
 		}
 
 		// I don't always
-		if (preg_match('/(i don?t always .*) (but when i do,? .*)/i',$text, $matches) === 1) {
+		if (preg_match('/(i don\'?t always .*) (but when i do,? .*)/i',$text, $matches) === 1) {
 
 			$final_text['text0'] = $matches[1];
 			$final_text['text1'] = $matches[2];
@@ -113,7 +113,7 @@ class MemeClass implements Memeable
 		}
 
 		// Too damn high
-		if (preg_match('/(.*) ([is|are|was|were] too damn high)/i', $text, $matches) === 1) {
+		if (preg_match('/(.*) ((is|are|was|were) too damn high)/i', $text, $matches) === 1) {
 
 			$final_text['text0'] = $matches[1];
 			$final_text['text1'] = $matches[2];
@@ -121,7 +121,6 @@ class MemeClass implements Memeable
 
 			return $final_text;
 		}
-
 
 	}
 
