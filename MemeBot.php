@@ -26,6 +26,7 @@ if($text == '') {
     <text> all the <text> - X all the Y
     <text> everywhere - buzz leclair Everywhere
     <text> too damn high - Too damn high
+    Nobody have time for <text> - Aint nobody have time for that
     ");
 }
 
