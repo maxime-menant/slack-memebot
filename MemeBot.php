@@ -34,8 +34,12 @@ if($text == '') {
 
 $returned_meme = $meme->generateMeme($text);
 
-slack($returned_meme, $user, $channel);
-sendResponse($text);
+if ($returned_meme != '') {
+  slack($returned_meme, $user, $channel);
+  sendResponse("/meme ".$text);
+} else {
+  sendResponse("Meme Generation Failed, try again: /meme ".$text);
+}
 
 exit;
 
@@ -52,7 +56,7 @@ function sendResponse($response)
     //     'unfurl_links' => true
     // )));
   header("HTTP/1.1 200 OK");
-  die("/meme ".$response);
+  die($response);
 }
 
 function sendHtmlResponse($response)
