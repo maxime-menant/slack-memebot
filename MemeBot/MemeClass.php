@@ -201,7 +201,7 @@ class MemeClass implements Memeable
 	{
 		$args = $this->matchMeme($text);
 
-		$url = 'https://api.imgflip.com/caption_image?template_id=' . urlencode($args['template_id']) . '&username=corey_domandtom&password=Developer8&text0=' . rawurlencode($args['text0']) . '&text1=' . rawurlencode($args['text1']). '';
+		$url = 'https://api.imgflip.com/caption_image?template_id=' . urlencode($args['template_id']) . '&username=intellimeme&password=intellimeme&text0=' . rawurlencode($args['text0']) . '&text1=' . rawurlencode($args['text1']). '';
 
 		$response = $this->sendRequest($url);
 		return $response->data->url;
