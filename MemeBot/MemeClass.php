@@ -195,6 +195,18 @@ class MemeClass implements Memeable
         return $final_text;
     }
 
+    // back in my day
+    if (preg_match('/(back in my day) (.*)/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = $matches[1];
+        //$final_text['text1'] = $matches[2];
+        $final_text['template_id'] = '718432';
+
+        return $final_text;
+    }
+
+
+
 	}
 
 	public function generateMeme($text)

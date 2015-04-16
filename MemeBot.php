@@ -33,6 +33,7 @@ if($text == '') {
     you <text>, and you <text> everybody gets <text> - You get an X, and you get an X. Everybody gets an X
     flip <text> | <text> - Flip the table
     <text> shut up and take my money - Shut up and take my money
+    back in my day <text> - Grumpy old man
     ");
 }
 
