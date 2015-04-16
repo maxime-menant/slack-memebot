@@ -36,6 +36,7 @@ if($text == '') {
     Back in my day <text> - Grumpy old man
     <text> and it's gone - South Park Banker Guy
     Am I the only one around here <text> - The Big Lebowski
+    <text> nobody bats an eye <text> everyone loses their minds - Heath Ledger Joker
     ");
 }
 

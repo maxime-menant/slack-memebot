@@ -225,6 +225,17 @@ class MemeClass implements Memeable
         return $final_text;
     }
 
+
+    // nobody bats an eye <text> everyone loses their minds - Heath Ledger Joker
+    if (preg_match('/(.* bats an eye) (.* loses their minds?)/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = $matches[1];
+        $final_text['text1'] = $matches[2];
+        $final_text['template_id'] = '1790995';
+
+        return $final_text;
+    }
+
 	}
 
 	public function generateMeme($text)
