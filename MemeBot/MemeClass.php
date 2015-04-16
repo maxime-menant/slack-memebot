@@ -152,6 +152,49 @@ class MemeClass implements Memeable
         return $final_text;
     }
 
+		// Too afraid to ask
+    if (preg_match('/(.*) (and (at this point)? i(\s|\')?am too afraid to ask)/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = $matches[1];
+        $final_text['text1'] = $matches[2];
+        $final_text['template_id'] = '24557067';
+
+        return $final_text;
+    }
+
+
+    // Shut up and take my money
+    if (preg_match('/(.*) (shut up and take my money)/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = $matches[1];
+        $final_text['text1'] = $matches[2];
+        $final_text['template_id'] = '176908';
+
+        return $final_text;
+    }
+
+
+    // You get an X and you get an X
+    if (preg_match('/(you .*, and you .*) (everybody gets? .*)/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = $matches[1];
+        $final_text['text1'] = $matches[2];
+        $final_text['template_id'] = '852675';
+
+        return $final_text;
+    }
+
+
+		// Flip the table
+    if (preg_match('/flip (.*) \| (.*)/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = $matches[1];
+        $final_text['text1'] = $matches[2];
+        $final_text['template_id'] = '1380694';
+
+        return $final_text;
+    }
+
 	}
 
 	public function generateMeme($text)

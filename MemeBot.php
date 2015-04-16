@@ -29,6 +29,10 @@ if($text == '') {
     Nobody have time for <text> - Aint nobody have time for that
     <text> | <text> determine(s)/prove(s) that was a lie
     <text> and you should feel bad - You should feel bad Zoidberg
+    <text> and (at this point) I'am too afraid to ask - Afraid to ask Andy
+    you <text>, and you <text> everybody gets <text> - You get an X, and you get an X. Everybody gets an X
+    flip <text> | <text> - Flip the table
+    <text> shut up and take my money - Shut up and take my money
     ");
 }
 
