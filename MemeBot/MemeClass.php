@@ -156,7 +156,7 @@ class MemeClass implements Memeable
     if (preg_match('/(.*) (and (at this point)? i(\s|\')?am too afraid to ask)/i', $text, $matches) === 1) {
 
         $final_text['text0'] = $matches[1];
-        $final_text['text1'] = $matches[2];
+        $final_text['text1'] = "and at this point I\'am too afraid to ask";
         $final_text['template_id'] = '24557067';
 
         return $final_text;
