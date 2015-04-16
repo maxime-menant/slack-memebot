@@ -215,6 +215,16 @@ class MemeClass implements Memeable
         return $final_text;
     }
 
+    // am i the only one around here
+    if (preg_match('/(am i the only one around here) (.*)/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = $matches[1];
+        $final_text['text1'] = $matches[2];
+        $final_text['template_id'] = '259680';
+
+        return $final_text;
+    }
+
 	}
 
 	public function generateMeme($text)

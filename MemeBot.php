@@ -35,6 +35,7 @@ if($text == '') {
     <text> shut up and take my money - Shut up and take my money
     Back in my day <text> - Grumpy old man
     <text> and it's gone - South Park Banker Guy
+    Am I the only one around here <text> - The Big Lebowski
     ");
 }
 
