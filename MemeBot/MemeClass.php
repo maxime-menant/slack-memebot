@@ -142,6 +142,16 @@ class MemeClass implements Memeable
         return $final_text;
     }
 
+    // You should feel bad
+    if (preg_match('/(.*) (and you should feel bad)/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = $matches[1];
+        $final_text['text1'] = $matches[2];
+        $final_text['template_id'] = '35747';
+
+        return $final_text;
+    }
+
 	}
 
 	public function generateMeme($text)
