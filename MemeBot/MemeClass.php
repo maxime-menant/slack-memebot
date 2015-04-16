@@ -205,7 +205,15 @@ class MemeClass implements Memeable
         return $final_text;
     }
 
+    // And it's gone
+    if (preg_match('/(.*) (a+n+d+ it\'?s gone)/i', $text, $matches) === 1) {
 
+        $final_text['text0'] = $matches[1];
+        $final_text['text1'] = $matches[2];
+        $final_text['template_id'] = '766986';
+
+        return $final_text;
+    }
 
 	}
 
