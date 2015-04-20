@@ -239,7 +239,7 @@ class MemeClass implements Memeable
     // Ya'll got anymore of that
     if (preg_match('/(you have more of (that|them)) (.*)/i', $text, $matches) === 1) {
 
-       $final_text['text0'] = "Ya\'ll got anymore of" . $matches[2];
+       $final_text['text0'] = "Ya\'ll got anymore of " . $matches[2];
        $final_text['text1'] = $matches[3];
        $final_text['template_id'] = '13424299';
 
