@@ -37,6 +37,9 @@ if($text == '') {
     <text> and it's gone - South Park Banker Guy
     Am I the only one around here <text> - The Big Lebowski
     <text> nobody bats an eye <text> everyone loses their minds - Heath Ledger Joker
+    you have more of that|them <text> - Ya'll got any more of
+    <text> you underestimate my power - Anakin You underestimate my power
+    <text> you are the MVP - Kevin Durant You da real MVP
     ");
 }
 
