@@ -277,6 +277,16 @@ class MemeClass implements Memeable
         return $final_text;
     }
 
+            // I am not even mad, it's amazing
+    if (preg_match('/(.*) (I(\'?| )am|I\'?m not mad)/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = $matches[1];
+        $final_text['text1'] = "I'm not even mad, it's amazing";
+        $final_text['template_id'] = '10893056';
+
+        return $final_text;
+    }
+
     // I am not even mad, it's amazing
     if (preg_match('/(I(\'?| )am|I\'?m not mad)/i', $text, $matches) === 1) {
 
@@ -287,15 +297,6 @@ class MemeClass implements Memeable
         return $final_text;
     }
 
-        // I am not even mad, it's amazing
-    if (preg_match('/(.*) (I(\'?| )am|I\'?m not mad)/i', $text, $matches) === 1) {
-
-        $final_text['text0'] = $matches[1];
-        $final_text['text1'] = "I'm not even mad, it's amazing";
-        $final_text['template_id'] = '10893056';
-
-        return $final_text;
-    }
 
 	}
 
