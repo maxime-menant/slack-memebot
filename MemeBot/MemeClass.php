@@ -267,6 +267,36 @@ class MemeClass implements Memeable
        return $final_text;
     }
 
+    // anakin - don't underestimate my power
+    if (preg_match('/(you underestimate my power)/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = "";
+        $final_text['text1'] = "You underestimate my power";
+        $final_text['template_id'] = '284353';
+
+        return $final_text;
+    }
+
+    // I am not even mad, it's amazing
+    if (preg_match('/(I(\'?| )am|I\'?m not mad)/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = "";
+        $final_text['text1'] = "I'm not even mad, it's amazing";
+        $final_text['template_id'] = '10893056';
+
+        return $final_text;
+    }
+
+        // I am not even mad, it's amazing
+    if (preg_match('/(.*) (I(\'?| )am|I\'?m not mad)/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = $matches[1];
+        $final_text['text1'] = "I'm not even mad, it's amazing";
+        $final_text['template_id'] = '10893056';
+
+        return $final_text;
+    }
+
 	}
 
 	public function generateMeme($text)
