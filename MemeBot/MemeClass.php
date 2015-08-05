@@ -8,7 +8,8 @@ class MemeClass implements Memeable
 		$final_text = array(
 			"text0" => '',
 			"text1" => '',
-			"template_id" => ''
+			"template_id" => '',
+            "isMeme" => true
 		);
 
 		// This is going to be a mess but we have no choice
@@ -297,6 +298,14 @@ class MemeClass implements Memeable
         return $final_text;
     }
 
+    // On en a gros
+    if (preg_match('/on en a gros/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = "https://33.media.tumblr.com/c6d5045fd55e6e5db4657e9e59faaae3/tumblr_n5o5n0mqqg1tc3kh4o1_500.gif";
+        $final_text['isMeme'] = false;
+
+        return $final_text;
+    }
 
 	}
 
@@ -304,10 +313,15 @@ class MemeClass implements Memeable
 	{
 		$args = $this->matchMeme($text);
 
-		$url = 'https://api.imgflip.com/caption_image?template_id=' . urlencode($args['template_id']) . '&username=intellimeme&password=intellimeme&text0=' . rawurlencode($args['text0']) . '&text1=' . rawurlencode($args['text1']). '';
+        if ($args['isMeme'] == true) {
+            $url = 'https://api.imgflip.com/caption_image?template_id=' . urlencode($args['template_id']) . '&username=intellimeme&password=intellimeme&text0=' . rawurlencode($args['text0']) . '&text1=' . rawurlencode($args['text1']). '';
 
-		$response = $this->sendRequest($url);
-		return $response->data->url;
+            $response = $this->sendRequest($url);
+            return $response->data->url;
+        } else {
+            $url = $args['text0'];
+            return $url;
+        }
 	}
 
 
