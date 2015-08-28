@@ -307,6 +307,15 @@ class MemeClass implements Memeable
         return $final_text;
     }
 
+    // Mind blown
+    if (preg_match('/mind blown/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = "http://media.giphy.com/media/k7nUblXRPCsc8/giphy-tumblr.gif";
+        $final_text['isMeme'] = false;
+
+        return $final_text;
+    }
+
 	}
 
 	public function generateMeme($text)
