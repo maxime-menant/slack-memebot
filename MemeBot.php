@@ -43,6 +43,7 @@ if($text == '') {
     <text> (optional) Im not mad - I am not even mad, it's amazing
     On en a gros - On en a gros gif
     Mind blown - Mind blown gif
+    crash - Crash gif
     ");
 }
 
