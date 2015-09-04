@@ -316,6 +316,18 @@ class MemeClass implements Memeable
         return $final_text;
     }
 
+    // Crash
+    if (preg_match('/crash/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = "http://giphy.com/gifs/guy-everything-fk-AqpK7kiHuXApW";
+        $final_text['isMeme'] = false;
+
+        return $final_text;
+    }
+
+
+
+
 	}
 
 	public function generateMeme($text)
