@@ -325,6 +325,14 @@ class MemeClass implements Memeable
         return $final_text;
     }
 
+    // magic
+    if (preg_match('/crash/i', $text, $matches) === 1) {
+
+        $final_text['text0'] = "http://media1.giphy.com/media/ujUdrdpX7Ok5W/giphy.gif";
+        $final_text['isMeme'] = false;
+
+        return $final_text;
+    }
 
 
 
