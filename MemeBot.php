@@ -44,6 +44,8 @@ if($text == '') {
     On en a gros - On en a gros gif
     Mind blown - Mind blown gif
     crash - Crash gif
+    wtf - What the fuck gif Colbert
+    magic - magic gif Shia
     ");
 }
 
