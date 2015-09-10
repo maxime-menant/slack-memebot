@@ -93,7 +93,7 @@ function slack($message, $username, $channel) {
       ));
 
   // You can get your webhook endpoint from your Slack settings
-  $ch = curl_init("https://hooks.slack.com/services/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");
+  $ch = curl_init("https://hooks.slack.com/services/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");
   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
   curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
